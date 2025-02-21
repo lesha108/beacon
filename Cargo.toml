@@ -1,0 +1,16 @@
+[package]
+name = "beacon"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.30", features = ["cargo"] }
+ctrlc = "3.4.5"
+industrial-io = "0.6.0"
+morse-codec = "0.4.11"
+
+[profile.release]
+codegen-units = 1 
+#debug = true 
+lto = true
+opt-level = "z"
