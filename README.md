@@ -4,7 +4,7 @@ CW beacon for LibreSDR.
 Program use IIO library to transmit callsing in infinite loop.
 Provide freq, callsign in command line to start beacon.
 
-Can run remotely providing host name or IP of LisreSDR or ADALM PlutoSDR. 
+Can run remotely providing host name or IP of LibreSDR or ADALM PlutoSDR. 
 Release has been built for Zynq ARM platform. Can be built for intel/amd and other platforms as well.
 
 To run on 192.168.5.10 LibreSDR:
@@ -27,10 +27,11 @@ Short instructions to build (I use WSL Ubuntu 2204 as host platform).
 
 Install linaro gcc toolchain compatible with linux on your Libre/Zynq/PlutoSDR. Check info page on Pluto disk.
 Be warned, latest releases of gcc has incompatible with pluto linux libc version.
+Install libiio 0.25. 
 
 Install Rust.
 Add Rust target armv7-unknown-linux-gnueabihf using rustup or somehow
 
-Compile relese:
+Compile release:
 
 cargo build --target=armv7-unknown-linux-gnueabihf --release
